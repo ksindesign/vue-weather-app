@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-  import {refn} from 'vue'
+  import {ref} from 'vue'
 
   const city = ref('')
 
