@@ -6,13 +6,12 @@
 </template>
 
 <script setup>
-  import {ref} from 'vue'
+  import {refn} from 'vue'
 
   const city = ref('')
 
   const submitForm = () => {
     emits('submit-form', city.value)
-    city.value = ''
   }
 
   const emits = defineEmits(['submit-form'])
