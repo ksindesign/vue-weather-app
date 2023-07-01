@@ -12,7 +12,7 @@ import Title from './components/Title.vue'
 import Form from './components/Form.vue'
 import Results from './components/Results.vue'
 
-// データの保管
+// Saving data
 const results = reactive({
   country: '',
   cityName: '',
@@ -20,10 +20,10 @@ const results = reactive({
   icon: '',
 })
 
-const getWeather = () => {
+const getWeather = (city) => {
   axios
     .get(
-      'https://api.weatherapi.com/v1/current.json?key=b480752178fd4b3f99f00123230107&q=London&aqi=no'
+      `https://api.weatherapi.com/v1/current.json?key=b480752178fd4b3f99f00123230107&q=${city}&aqi=no`
     )
     .then((res) => {
       ;(results.country = res.data.location.country),
